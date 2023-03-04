@@ -26,6 +26,8 @@ fn main() {
 
     let server = Server::http(["0.0.0.0", &port].join(":")).unwrap();
 
+    println!("Server is running on {port}");
+
     for request in server.incoming_requests() {
         if request.method() == &Method::Get {
             if request.url() == "/" {
