@@ -16,9 +16,6 @@ fn main() {
                 let _ = request.respond(Response::from_file(File::open("index.html").unwrap()));
                 continue;
             }
-
-            let _ = request.respond(Response::from_string("not implemented"));
-            continue;
         }
 
         if request.method() == &Method::Post {
@@ -26,9 +23,6 @@ fn main() {
                 let _ = request.respond(Response::from_string("echoed"));
                 continue;
             }
-
-            let _ = request.respond(Response::from_string("not implemented"));
-            continue;
         }
 
         let _ = request.respond(Response::from_string("not implemented"));
