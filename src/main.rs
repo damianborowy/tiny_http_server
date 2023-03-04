@@ -24,7 +24,5 @@ fn main() {
                 continue;
             }
         }
-
-        let _ = request.respond(Response::from_string("not implemented"));
     }
 }
